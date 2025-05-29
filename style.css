@@ -1,9 +1,85 @@
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+div {
+  border: 1px solid black;
+}
+
+.grid-container {
+  border: 5px solid red;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-template-areas: "sidebar header" "sidebar projects" "sidebar projects" "sidebar projects" "sidebar projects";
+}
+
+/* Header styling */
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: "search user-info" "buttons buttons";
+}
+
+.search-bar {
+  grid-area: search;
+}
+
+.user-info {
+  grid-area: user-info;
+}
+
+.buttons {
+  grid-area: buttons;
+}
+
+/* Sidebar styling */
+
+.sidebar {
+  grid-area: sidebar;
 }
 
 
-h1 {
 
-    border: 1px solid black;
+.icon {
+  width: 40px;
+}
+
+/* Projects styling */
+
+.projects {
+  grid-area: projects;
+}
+.projects {
+  background-color: #e1e8ef;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "projects announcements" "projects trending";
+}
+
+.container {
+text-align: center;
+  align-content: center;
+}
+
+.your-projects  {
+  grid-area: projects;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
+
 }
