@@ -17,7 +17,8 @@ div {
   min-height: 100%;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-areas: "sidebar header" "sidebar projects" "sidebar projects" "sidebar projects" "sidebar projects";
+  grid-template-areas: "sidebar header" "sidebar projects" "sidebar projects" "sidebar projects" "sidebar projects" "sidebar projects"
+  "sidebar projects" "sidebar projects";
 }
 
 /* Header styling */
@@ -37,19 +38,22 @@ div {
   gap: 30px;
 }
 
-.search.icon {
-  width: 3%;
+.icon {
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search.form {
   align-items: center;
   width: 70%;
-   height: 25%;
+  height: 25%;
 }
 
 .search.input {
   width: 100%;
- height: 100%;
+  height: 100%;
   border-style: none;
   background-color: #e3e8f0;
   border-radius: 20px;
@@ -57,11 +61,51 @@ div {
 
 .user-info {
   grid-area: user-info;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
-.buttons {
-  grid-area: buttons;
+.user-pfp {
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 30px;
 }
+
+.username {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.buttons-container {
+  grid-area: buttons;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-pfp.big {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+}
+
+.user-welcome-text:nth-child(1) {
+  font-size: 0.6rem;
+}
+
+/* .user-welcome-text */
 
 /* Sidebar styling */
 
